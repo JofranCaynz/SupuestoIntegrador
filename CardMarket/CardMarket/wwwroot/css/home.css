@@ -1,0 +1,20 @@
+.texto {
+    background: #CFCFCF;
+    background: linear-gradient(to right, #CFCFCF 0%, #CF757B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.texto2 {
+    background: #CFCFCF;
+    background: linear-gradient(to right, #CFCFCF 0%, #CF757B 100%);
+}
+.imagen img{
+width:55%
+}
+
+.imagen2{
+    width:160%
+}
+.arriba{
+    top:20%
+}

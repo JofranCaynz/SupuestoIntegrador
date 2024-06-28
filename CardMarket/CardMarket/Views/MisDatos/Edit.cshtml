@@ -1,0 +1,239 @@
+﻿@model CardMarket.Models.Cliente
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*
+<head>
+    <link href="~/css/misdatos.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    
+<div class="login-box">
+        <h2>Mis Datos</h2>
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+                <label asp-for="Nombre" class="control-label text-light"></label>
+                <div class="user-box">
+                    <input asp-for="Nombre" class="form-control" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                 </div>
+            <div class="user-box" hidden>
+                
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <label asp-for="Telefono" class="control-label text-light"></label>
+            <div class="user-box">
+                
+                <input asp-for="Telefono" class="form-control" />
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <label asp-for="Direccion" class="control-label text-light"></label>
+            <div class="user-box">
+                    
+                    <input asp-for="Direccion"/>
+                    <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+
+            <label asp-for="Poblacion" class="control-label text-light"></label>
+            <div class="user-box">
+
+                <input asp-for="Poblacion" />
+                <span asp-validation-for="Poblacion" class="text-danger"></span>
+            </div>
+
+            <label asp-for="CodigoPostal" class="control-label text-light"></label>
+            <div class="user-box">
+
+                <input asp-for="CodigoPostal" />
+                <span asp-validation-for="CodigoPostal" class="text-danger"></span>
+            </div>
+
+            <label asp-for="Nif" class="control-label text-light"></label>
+            <div class="user-box">
+
+                <input asp-for="Nif" />
+                <span asp-validation-for="Nif" class="text-danger"></span>
+            </div>
+                <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+
+    @*
+
+    <div class="login-box">
+            <h2>Mis Datos</h2>
+            <form asp-action="Edit">
+                <div class="user-box">
+                    <input asp-for="Nombre">
+                    <label asp-for="Nombre">Nombre</label>
+                </div>
+                <div class="user-box">
+                    <input asp-for="Telefono">
+                    <label asp-for="Telefono">Telefono</label>
+                </div>
+                <div class="user-box">
+                    <input asp-for="Direccion" >
+                    <label asp-for="Direccion">Dirección</label>
+                </div>
+                <div class="user-box">
+                    <input asp-for="Poblacion">
+                    <label asp-for="Poblacion">Población</label>
+                </div>
+                <div class="user-box">
+                    <input asp-for="CodigoPostal">
+                    <label asp-for="CodigoPostal">Código Postal</label>
+                </div>
+                <div class="user-box">
+                    <input asp-for="Nif">
+                    <label asp-for="Nif">Nif</label>
+                </div>
+                <input type="submit" value="Save" class="btn btn-primary" />
+            <br /><br /><br />
+            </form>
+
+        </div>
+    
+</body>
+*@
+
+<style>
+    .login-dark {
+        background-size: cover;
+    }
+
+        .login-dark form {
+            max-width: 400px;
+            width: 90%;
+            background-color: #1e2833;
+            padding: 40px;
+            border-radius: 4px;
+            margin-left: 30%;
+            top: 50%;
+            left: 50%;
+            color: #fff;
+            box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
+        }
+
+        .login-dark .illustration {
+            text-align: center;
+            padding: 15px 0 20px;
+            font-size: 100px;
+            color: #2980ef;
+        }
+
+        .login-dark form .form-control {
+            background: none;
+            border: none;
+            border-bottom: 1px solid #434a52;
+            border-radius: 0;
+            box-shadow: none;
+            outline: none;
+            color: inherit;
+        }
+
+        .login-dark form .btn-primary {
+            background: #214a80;
+            border: none;
+            border-radius: 4px;
+            padding: 11px;
+            box-shadow: none;
+            margin-top: 26px;
+            text-shadow: none;
+            outline: none;
+        }
+
+            .login-dark form .btn-primary:hover, .login-dark form .btn-primary:active {
+                background: #214a80;
+                outline: none;
+            }
+
+        .login-dark form .forgot {
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            color: #6f7a85;
+            opacity: 0.9;
+            text-decoration: none;
+        }
+
+            .login-dark form .forgot:hover, .login-dark form .forgot:active {
+                opacity: 1;
+                text-decoration: none;
+            }
+
+        .login-dark form .btn-primary:active {
+            transform: translateY(1px);
+        }
+
+</style>
+
+<body style="background: #214a80;">
+    <div class="login-dark container-fluid" style="height: 100%;">
+        <form asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <u><h1 class="text-center">Mis Datos</h1></u> <br />
+
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="user-box" hidden>
+
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <label asp-for="Telefono" class="control-label"></label>
+                <input asp-for="Telefono" class="form-control" />
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Direccion" class="control-label"></label>
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Poblacion" class="control-label"></label>
+                <input asp-for="Poblacion" class="form-control" />
+                <span asp-validation-for="Poblacion" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="CodigoPostal" class="control-label"></label>
+                <input asp-for="CodigoPostal" class="form-control" />
+                <span asp-validation-for="CodigoPostal" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Nif" class="control-label"></label>
+                <input asp-for="Nif" class="form-control" />
+                <span asp-validation-for="Nif" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group text-center">
+                <input type="submit" value="Enviar" class="btn btn-primary" />
+            </div>
+</form>
+            </div>
+</body>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
+

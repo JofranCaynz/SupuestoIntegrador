@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="~/css/home.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<body class="bg-dark">
+<section class="py-5 bg-dark text-light">
+	<div class="container">
+		<div class="row align-items-lg-center mb-5">
+            <!-- Columna Izquierda -->
+            <div class="col-md-4"><img alt="Image Left" class="img-fluid imagen2" src="https://cdn11.bigcommerce.com/s-ueh8vl5d4c/images/stencil/1280x1280/products/3209/8213/evoskyeliteeeveeB__84844.1625547180.png?c=2"></div>
+
+            <!-- Columna Central con Texto -->
+            <div class="col-md-4 mb-5 mb-md-0 text-center">
+                <h1 class="display-3 fw-bold"><span class="texto">CardMarket</span></h1>
+                <h2 class="lead mt-3 mb-4">Colecciona fácil y sencillo con nosotros, compra de cartas y artículos para juegos de cartas coleccionables.</h2>
+                <a class="btn btn-lg texto2" asp-controller="Escaparate" asp-action="Index">Escaparate</a>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="col-md-4"><img alt="Image Right" class="img-fluid imagen2" src="https://www.elbastiondelsur.com/wp-content/uploads/2022/09/pokemon-tcg-caja-entrenador-elite-trainer-box-espada-y-escudo-11-lost-origin-ingles.webp"></div>
+        </div>
+		<div class="row d-lg-flex d-none text-center imagen">
+			<div class="col p-3"><img alt="Logo" src="https://1000logos.net/wp-content/uploads/2022/10/Magic-The-Gathering-logo.png"></div>
+			<div class="col p-3"><img alt="Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Pok%C3%A9mon_Trading_Card_Game_logo.svg/2560px-Pok%C3%A9mon_Trading_Card_Game_logo.svg.png"></div>
+			<div class="col p-3"><img alt="Logo" src="https://reinodeltcg.com/cdn/shop/collections/ONE-PIECE-LOGO.png?v=1688888787"></div>
+			<div class="col p-3"><img alt="Logo" src="https://toyworldmag.co.uk/wp-content/uploads/2022/03/YU-GI-OH-LOGO-copy-1024x418.png"></div>
+			<div class="col p-3"><img alt="Logo" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/627fe721-846f-4f75-ac61-111ca00b27dd/dazrvgc-459f7df3-9d96-4470-ad64-561a1e22a858.png/v1/fill/w_792,h_436/yugioh_vrains__logo__by_alanmac95_dazrvgc-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDM2IiwicGF0aCI6IlwvZlwvNjI3ZmU3MjEtODQ2Zi00Zjc1LWFjNjEtMTExY2EwMGIyN2RkXC9kYXpydmdjLTQ1OWY3ZGYzLTlkOTYtNDQ3MC1hZDY0LTU2MWExZTIyYTg1OC5wbmciLCJ3aWR0aCI6Ijw9NzkyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.MWKuIe6yojiAWuR0U4Hhn6tV2UhBTlfB-EZkX7zQSgk"></div>
+		</div>
+	</div>
+</section>
+
+    <section class="py-5">
+	<div class="container">
+		<div class="row justify-content-center bg-dark text-light">
+			<div class="col-lg-10">
+				<div class="row align-items-center">
+					<div class="col-md-4 mb-4 mb-md-0 order-md-2"><img alt="" class="img-fluid rounded-circle" src="https://setupstreamers.com/wp-content/uploads/2021/11/Clipboard-81.jpg"></div>
+					<div class="col-md-8 ps-md-5">
+						<div class="text-primary mb-4">
+							<svg class="bi bi-quote" fill="currentColor" height="48" viewbox="0 0 16 16" width="48" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"></path></svg>
+						</div>
+						<p>Es la mejor tienda de cartas coleccionables, llevo toda la vida jugando y esto es lo mejor, la verdad que este texto es puro relleno, nisiquiera se lo he pedido al gepeto lo estoy escribiendo yo me estoy cansando tio tanto escribir al menos escribo a 80 palabras por minuto vaya bestia fin.</p>
+						<h5 class="fw-bold">Alex el Capo</h5>
+						<div class="text-light">
+							Youtuber
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div style="border-top: solid, border-bit">
+    <footer class="site-footer text-light" style="border-top solid, border-bot solid" >
+
+      <hr>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-6 col-xs-12">
+						<p class="copyright-text">
+							Copyright &copy; 2024 Todos los derechos reservados.
+							<a class="nav-link text-white float-right" asp-area="" asp-controller="Home" asp-action="Privacy">Consulta nuestra privacidad</a>
+						</p>
+					</div>
+				</div>
+			</div>
+
+</footer>
+</div>
+</body>

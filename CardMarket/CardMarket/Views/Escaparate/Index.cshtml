@@ -1,0 +1,69 @@
+﻿@model IEnumerable<CardMarket.Models.Producto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="~/css/escaparate_estilo.css" rel="stylesheet" />
+</head>
+
+
+<body>
+    @{
+    <div class="wrapper">
+        <h1>Nuestros productos</h1>
+        <p>
+            Echa un vistazo a nuestros productos.
+        </p>
+        
+        <div class="layout">
+            <main class="grid">
+                @foreach(var item in Model){
+                        if(item.Categoria.ToString() != "Cartas Sueltas")
+                    {
+                        <div class="product">
+                            <img src="~/imagenes/@item.Imagen" alt=""/>
+                            <h3 class="product__title">@item.Descripcion <br> @item.Precio€</h3>
+                            <div class="flex-group space-between v-center">
+                            </div>
+                                <div class="card-footer">
+                                    <form asp-action="AgregarCarrito">
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        @if (item.Stock <= 0)
+                                        {
+                                            <button type="button" class="btn btn-danger btn-disabled"><i class='bi-cart-plus' disabled></i>AGOTADO</button>
+                                        }
+                                        else
+                                        {
+                                            <a asp-action="AgregarCarrito" asp-route-id=@item.Id type="submit" class="btn btn-primary">  Agregar al carrito</a>
+                                        }
+                                    </form>
+                                </div>
+                        </div>
+                    }
+                }
+            </main>
+
+            <aside>
+                    <h3><u>Categorías</u></h3>
+                    <table class="table-dark">
+                    <td><a asp-action="Index" asp-route-id="">Mostrar todo</a></td>
+                @foreach(var i in ViewData["ListaCategorias"] as IEnumerable<Categoria>){   
+                    
+                        <tr>
+                            <td>
+                                <a asp-action="Index" asp-route-id="@i.Id">@i.Descripcion.ToString() <br /></a>
+                            </td>
+                        </tr>
+                   
+                }
+                </table>
+            </aside>
+        </div>
+        </div>
+        }
+        <br /><br /><br />
+</body>
